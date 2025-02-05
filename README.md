@@ -1,86 +1,93 @@
-# Text-to-Speech and Text-to-CSV
+# Escort-for-Visually-Challenged
 
-This repository contains two Python scripts:
-
-1. **Text-to-Speech**: Demonstrates a basic implementation of text-to-speech conversion using Python's `pyttsx3` library. The script takes a given text and converts it into speech.
-2. **Text-to-CSV**: Converts a semicolon-separated text file into a CSV format by replacing semicolons with commas.
+This project provides accessible solutions for visually challenged individuals by leveraging various Python scripts to assist with reading text from images, converting text to speech, and transforming text into CSV format.
 
 ## Features
 
-### Text-to-Speech
-- Convert text into speech with customizable voice properties.
-- Simple and easy-to-use Python script.
-- Compatible with different platforms (Windows, Mac, Linux).
+### 1. **Text-to-Speech**
+- Converts a given text into speech using the `pyttsx3` library.
+- Provides an audio output of the given text, useful for visually impaired users.
 
-### Text-to-CSV
-- Convert semicolon-separated text files into CSV files.
-- Useful for cleaning and transforming data for further analysis.
+### 2. **Image-to-Text**
+- Extracts text from images using Optical Character Recognition (OCR) via `pytesseract`.
+- Allows users to convert image-based text (like photographs or scanned documents) into readable text.
+
+### 3. **Text-to-CSV**
+- Converts semicolon-separated text files into CSV format, making the data more accessible for analysis.
+- Helps users transform data into a structured CSV file format for further use.
 
 ## Installation
 
-To run these scripts, you'll need to have Python installed on your system. You also need to install the required libraries for each script.
+To run these scripts, you'll need Python installed on your system. You also need to install some external libraries.
 
 ### Step 1: Install Python (if not already installed)
 
-If you don't have Python installed, download and install the latest version from [here](https://www.python.org/downloads/).
+Download and install Python from [here](https://www.python.org/downloads/).
 
 ### Step 2: Install Dependencies
 
-Use `pip` to install the required libraries for the **Text-to-Speech** script:
+Use the following command to install the required libraries:
 
 ```bash
-pip install pyttsx3
-``` 
-
-For the **Text-to-CSV** script, no additional dependencies are required, as it uses Python's built-in functions.
+pip install pyttsx3 pytesseract opencv-python Pillow
+```
 
 ## Usage
 
-### Text-to-Speech
+### 1. **Text-to-Speech**
+
+This script reads out a predefined text in speech format.
 
 1. Clone the repository:
-    
     ```bash
-    git clone https://github.com/FathimaSheerin/Text-to-Speech-.git
+    git clone https://github.com/FathimaSheerin/Escort-for-Visually-Challenged.git
     ```
-    
-2. Navigate to the project folder:
-    
+
+2. Navigate to the project directory:
     ```bash
-    cd Text-to-Speech-
+    cd Escort-for-Visually-Challenged
     ```
-    
-3. Run the Python script:
-    
+
+3. Run the script:
     ```bash
     python text_to_speech.py
     ```
-    
-4. The script will read out the provided text aloud.
 
-### Text-to-CSV
+4. The script will read the provided text aloud.
 
-1. Clone the repository (if not done already):
-    
-    ```bash
-    git clone https://github.com/FathimaSheerin/Text-to-Speech-.git
+### 2. **Image-to-Text**
+
+This script extracts text from an image using OCR technology.
+
+1. Ensure that you have the image file available on your system.
+2. Edit the script to specify the correct image file path:
+    ```python
+    image_path = 'YOUR_IMAGE_PATH'
     ```
 
-2. Navigate to the project folder:
-    
+3. Run the script:
     ```bash
-    cd Text-to-Speech-
+    python image_to_text.py
     ```
 
-3. Edit the `text_to_csv.py` script to specify the input and output file paths.
+4. The script will print the extracted text from the image.
 
-4. Run the Python script:
-    
+### 3. **Text-to-CSV**
+
+This script converts a semicolon-separated text file into a CSV format.
+
+1. Provide the input file path and output file path in the script:
+    ```python
+    input_file = 'YOUR_INPUT_FILE_PATH'
+    output_file = 'YOUR_OUTPUT_FILE_PATH'
+    ```
+
+2. Run the script:
     ```bash
     python text_to_csv.py
     ```
 
-5. The script will convert the semicolon-separated text file into a CSV file.
+3. The script will replace semicolons with commas and save the updated data in CSV format.
 
 ## Contributing
 
@@ -89,4 +96,3 @@ Feel free to fork this repository, make improvements, and create pull requests. 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
